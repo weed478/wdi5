@@ -38,8 +38,9 @@ def read_fraction(prompt):
     return reduce((n, d))
 
 
-def print_fraction(a):
-    print("{}/{}".format(a[0], a[1]))
+def return_fraction(a):
+    return "({}/{})".format(a[0], a[1])
+
 
 
 if __name__ == "__main__":
@@ -47,8 +48,8 @@ if __name__ == "__main__":
     b = read_fraction("b = ")
     c = int(input("c = "))
 
-    print_fraction(add(a, b))
-    print_fraction(sub(a, b))
-    print_fraction(mul(a, b))
-    print_fraction(div(a, b))
-    print_fraction(pow(a, c))
+    print(return_fraction(add(a, b)))
+    print(return_fraction(sub(a, b)))
+    print(return_fraction(mul(a, b)))
+    print(return_fraction(div(a, b)))
+    print(return_fraction(pow(a, c)))
