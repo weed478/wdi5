@@ -1,5 +1,8 @@
 from zad1 import *
 
+# print("ax + by = c")
+# print("dx + ey = f")
+#
 # a = read_fraction("a = ")
 # b = read_fraction("b = ")
 # c = read_fraction("c = ")
