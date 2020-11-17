@@ -42,12 +42,13 @@ def print_fraction(a):
     print("{}/{}".format(a[0], a[1]))
 
 
-a = read_fraction("a = ")
-b = read_fraction("b = ")
-c = int(input("c = "))
+if __name__ == "__main__":
+    a = read_fraction("a = ")
+    b = read_fraction("b = ")
+    c = int(input("c = "))
 
-print_fraction(add(a, b))
-print_fraction(sub(a, b))
-print_fraction(mul(a, b))
-print_fraction(div(a, b))
-print_fraction(pow(a, c))
+    print_fraction(add(a, b))
+    print_fraction(sub(a, b))
+    print_fraction(mul(a, b))
+    print_fraction(div(a, b))
+    print_fraction(pow(a, c))
