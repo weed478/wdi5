@@ -1,22 +1,25 @@
+from zad1 import *
+
+
 def why(tab):
     geo_count = 0
     ary_count = 0
 
     geo = 0
-    q = 0
+    q = (0, 1)
 
     ary = 0
-    r = 0
+    r = (0, 1)
 
     for i in range(len(tab)):
         if geo == 0:
             geo += 1
 
         elif geo == 1:
-            q = tab[i] // tab[i - 1]
+            q = div(tab[i], tab[i - 1])
             geo += 1
 
-        elif tab[i] == tab[i - 1] * q:
+        elif tab[i] == mul(tab[i - 1], q):
             geo += 1
 
         else:
@@ -28,10 +31,10 @@ def why(tab):
             ary += 1
 
         elif ary == 1:
-            r = tab[i] - tab[i - 1]
+            r = sub(tab[i], tab[i - 1])
             ary += 1
 
-        elif tab[i] == tab[i - 1] + r:
+        elif tab[i] == add(tab[i - 1], r):
             ary += 1
 
         else:
@@ -48,5 +51,5 @@ def why(tab):
     return ary_count, geo_count
 
 
-tab = [1, 2, 3, 0, 1, 2, 4, 8, 16, 3, 4, 5, 6]
+tab = [(1, 1), (2, 1), (3, 1), (0, 1), (1, 1), (2, 1), (4, 1), (8, 1), (16, 1), (3, 1), (4, 1), (5, 1), (6, 1)]
 print(why(tab))
